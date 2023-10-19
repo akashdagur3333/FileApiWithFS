@@ -1,0 +1,50 @@
+<%- include('includes/header') %>
+<%- include('includes/upperHeader') %>
+  <h1 class="text-center"> Get file </h1>
+<br>
+
+<div class="container">
+  <% if(files.length==0) {%>
+    <h2 class="text-center">No File Added Please Add One</h2>
+    <div class="text-center">
+      <a href="/test/Object"><button class="btn btn-primary">Add One</button></a>
+
+    </div>
+    
+    <% } %>
+  <ul>
+    <% for(let val of files) {%>
+   <li>File Name -> <span style="font-size: 20px;font-style: bold;"><%=val%></span></li>
+   <div style="display: flex; ">
+    <form action="/test/readObject" method="POST">
+      <input
+  type="hidden"
+  name="fileName"
+  class="form-control"
+  value="<%=val%>"
+/>
+      <button type="submit" class="btn btn-primary">Read Content</button>
+      </form>
+
+       
+      <form action="/test/updateObject/<%=val%>" method="POST">
+    
+        <button type="submit" class="btn btn-primary ms-2">Update FileName</button>
+
+      </form>
+
+      
+
+
+
+      <form action="/test/deleteObject/<%=val%>" method="POST">
+    
+  <button type="submit" class="btn btn-danger ms-2">Delete File</button>
+        </form>
+     
+   </div>
+    <%}%>
+  </ul>
+
+</div>
+    <%- include('includes/body') %>

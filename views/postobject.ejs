@@ -1,0 +1,17 @@
+<%- include('includes/header') %>
+<%- include('includes/upperHeader') %>
+  <h1 class="text-center"> Add file </h1>
+<br>
+
+<div class="container">
+  <form action="/test/Object" method="POST">
+    Name File :<input type="text" name="fileName" placeholder="Enter File name only">
+    <br>
+    <br>
+    Name Content :<input type="text" name="fileContent" placeholder="Enter Description or Content">
+
+    <br>
+    <br>
+        <button type="submit" class="btn btn-primary" style="margin-left: 130px;"> Submit</button></form>
+</div>
+    <%- include('includes/body') %>

@@ -1,0 +1,17 @@
+<%- include('includes/header') %>
+<%- include('includes/upperHeader') %>
+  <h1 class="text-center"> Update file </h1>
+<br>
+
+<div class="container">
+  <form action="/test/changeObject" method="POST">
+     File Name :<input type="text" disabled name="name" value="<%=name%>">
+    <br>
+    <br>
+    <input type="text" hidden name="name" value="<%=name%>">
+    Updated Name :<input type="text" name="updatedName">
+    <br>
+    <br>
+        <button type="submit" class="btn btn-primary" style="margin-left: 130px;"> Submit</button></form>
+</div>
+    <%- include('includes/body') %>
