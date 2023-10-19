@@ -1,0 +1,6 @@
+# for running in your system
+#1.  npm i -> for install all required modules
+#2.  For Start server -> npm start or node index.js
+#3.  then you can check on browser with the port of 3000 so link is -> http://localhost:3000
+#4. their are 5 apis to addFile,deleteFile,updateFile,readFile,readDirectory(all Files Name)
+#5. you can add, delete, update,readfile by click page link as render in browser localhost 3000
